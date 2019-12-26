@@ -1,3 +1,9 @@
 
-<p>Premium - {{ premium }}</p>
-<button class="btn btn-primary" (click)="onClick()">Ok</button>
+<div class="inner-coverage" (click)="onClick($event)">
+        <p class="inner-coverage-para">Premium - {{ premium }}</p>
+       <!-- <ng-content select="div.unchecked-circle" *ngIf="!toggle"></ng-content>
+       <ng-content select="div.checked-circle" *ngIf="toggle"></ng-content> -->
+        <ng-content></ng-content>
+        
+</div>
+

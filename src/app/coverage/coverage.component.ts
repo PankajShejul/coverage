@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-coverage',
@@ -9,6 +9,7 @@ export class CoverageComponent implements OnInit {
 
   @Input() premium:number;
   @Output() premiumAmount=new EventEmitter<number>();
+  toggle=false;
   constructor() { }
 
   ngOnInit() {
@@ -16,5 +17,6 @@ export class CoverageComponent implements OnInit {
 
   onClick(){
     this.premiumAmount.emit(this.premium);
+    this.toggle=true;
   }
 }

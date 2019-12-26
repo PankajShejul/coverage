@@ -1,0 +1,21 @@
+.inner-coverage{
+        cursor: pointer;
+
+}
+
+.inner-coverage:hover{
+    
+    background-color: rgba(243, 228, 20, 0.466);
+    border: 1px solid rgba(202, 230, 43, 0.986);
+}
+
+.inner-coverage-para{
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.inner-coverage-para:hover{
+   color: rgba(177, 28, 28, 0.795);
+}
+
