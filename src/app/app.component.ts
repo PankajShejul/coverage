@@ -10,11 +10,12 @@ export class AppComponent {
   lastPremium=0;
   lastAddOnPremium=0;
   flagPremium:boolean[]=[false,false,false,false];
-
+  flagAddOn:boolean[]=[false,false];
+  addOnPremiums:number[]=[50,80];
 
   mobileNumbers:string[]=['9857461478','8874122145','7456321890','85213469','7412365890'];
 
-  addOnPremiums:number[]=[50,80];
+  
   totalAmount:number=0;
   onCoverage(premium:number,ind:number){
     this.totalAmount-=this.lastPremium;
@@ -31,10 +32,19 @@ export class AppComponent {
     }
   }
 
-  onAddOn(addOnPremium:number){
+  onAddOn(addOnPremium:number,ind:number){
     this.totalAmount-=this.lastAddOnPremium;
     this.totalAmount+=addOnPremium;
     this.lastAddOnPremium=addOnPremium;
+    for(let i=0;i<this.flagAddOn.length;i++)
+    {
+      if(ind==i)
+      {
+        this.flagAddOn[i]=true;
+      }else{
+        this.flagAddOn[i]=false;
+      }
+    }
   }
   
   selectedCoverage(){

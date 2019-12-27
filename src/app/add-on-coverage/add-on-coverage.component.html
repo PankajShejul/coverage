@@ -1,2 +1,5 @@
-<p>AddOn Premium = {{ addOnPremium }}</p>
-<button class="btn btn-danger" (click)="onClick()">Press Me</button>
+<div class="inner-addon" (click)="onClick()">
+    <p class="inner-addon-para">AddOn Premium = {{ addOnPremium }}</p>
+    <ng-content></ng-content>
+    
+</div>

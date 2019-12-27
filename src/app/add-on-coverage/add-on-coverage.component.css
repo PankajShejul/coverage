@@ -1,0 +1,19 @@
+.inner-addon{
+   cursor:pointer;
+}
+
+.inner-addon:hover{
+    
+    background-color: rgba(243, 228, 20, 0.466);
+    border: 1px solid rgba(202, 230, 43, 0.986);
+}
+
+.inner-addon-para{
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.inner-addon-para:hover{
+   color: rgba(177, 28, 28, 0.795);
+}
